@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: #f8f9fa;
+}
+
+.caixa {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 24px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+	
+.caixa h4 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+.caixa li {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+}
