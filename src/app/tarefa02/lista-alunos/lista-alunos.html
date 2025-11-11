@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Lista de Alunos</h1>
+
+  <!-- Desafio: Estatísticas -->
+  <div class="estatisticas">
+    <h2>Estatísticas</h2>
+    <p><strong>Total de Alunos:</strong> {{ totalAlunos }}</p>
+    <p><strong>Nota Mais Alta:</strong> {{ notaMaxima }}</p>
+    <p><strong>Nota Mais Baixa:</strong> {{ notaMinima }}</p>
+    <p [class.media-alta]="media >= 15">
+      <strong>Média:</strong> {{ media | number:'1.2-2' }}
+    </p>
+  </div>
+
+  <!-- Tabela de Alunos -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Nota Final</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let aluno of alunos">
+        <td>{{ aluno.id }}</td>
+        <td>{{ aluno.nome }}</td>
+        <td [class.nota-baixa]="aluno.notaFinal < 10">
+          {{ aluno.notaFinal }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
